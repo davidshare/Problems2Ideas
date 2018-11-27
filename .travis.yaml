@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+ - "stable"
+cache:
+  directories:
+    - "node_mo dules"
+after_success: npm run coverage
