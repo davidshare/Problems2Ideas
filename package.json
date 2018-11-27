@@ -1,0 +1,42 @@
+{
+  "name": "problems2ideas",
+  "version": "1.0.0",
+  "description": "\"A simple app for people to share problems they have with existing products, or suggest new ideas for products.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js ",
+    "test": "set NODE_ENV=test&& nyc --reporter=html --reporter=text mocha --require @babel/register ./server/tests/ --timeout 10000 --exit",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint:server": "eslint server/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidshare/Problems2Ideas.git"
+  },
+  "author": "David Essien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidshare/Problems2Ideas/issues"
+  },
+  "homepage": "https://github.com/davidshare/Problems2Ideas#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nodemon": "^1.18.6",
+    "nyc": "^13.1.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
