@@ -37,6 +37,7 @@
     "nyc": "^13.1.0"
   },
   "dependencies": {
+		"morgan": "^1.9.1",
     "express": "^4.16.4"
   }
 }
